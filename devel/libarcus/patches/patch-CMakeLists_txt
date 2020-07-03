@@ -1,0 +1,33 @@
+$OpenBSD$
+
+Index: CMakeLists.txt
+--- CMakeLists.txt.orig
++++ CMakeLists.txt
+@@ -66,9 +66,6 @@ set(arcus_HDRS
+     ${CMAKE_CURRENT_BINARY_DIR}/src/ArcusExport.h
+ )
+
+-set(ARCUS_VERSION 1.1.0)
+-set(ARCUS_SOVERSION 3)
+-
+ set(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_FULL_LIBDIR}")
+
+ if(BUILD_STATIC)
+@@ -118,8 +115,6 @@ endif()
+
+ set_target_properties(Arcus PROPERTIES
+     FRAMEWORK FALSE
+-    VERSION ${ARCUS_VERSION}
+-    SOVERSION ${ARCUS_SOVERSION}
+     PUBLIC_HEADER "${arcus_HDRS}"
+     DEFINE_SYMBOL MAKE_ARCUS_LIB
+     CXX_VISIBILITY_PRESET hidden
+@@ -150,7 +145,7 @@ install(EXPORT Arcus-targets
+ )
+
+ configure_package_config_file(ArcusConfig.cmake.in ${CMAKE_BINARY_DIR}/ArcusConfig.cmake INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/Arcus)
+-write_basic_package_version_file(${CMAKE_BINARY_DIR}/ArcusConfigVersion.cmake VERSION ${ARCUS_VERSION} COMPATIBILITY SameMajorVersion)
++write_basic_package_version_file(${CMAKE_BINARY_DIR}/ArcusConfigVersion.cmake VERSION 4.5.0 COMPATIBILITY SameMajorVersion)
+
+ install(FILES
+     ${CMAKE_BINARY_DIR}/ArcusConfig.cmake

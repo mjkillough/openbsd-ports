@@ -1,0 +1,2 @@
+A communication library based on Protocol Buffers. It is designed to facilitate
+the communication between Ultimaker Cura and its backend.
