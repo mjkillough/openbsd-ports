@@ -1,0 +1,25 @@
+@comment $OpenBSD: PLIST,v$
+include/Savitar/
+include/Savitar/Face.h
+include/Savitar/MeshData.h
+include/Savitar/Namespace.h
+include/Savitar/SavitarExport.h
+include/Savitar/Scene.h
+include/Savitar/SceneNode.h
+include/Savitar/ThreeMFParser.h
+include/Savitar/Types.h
+include/Savitar/Vertex.h
+include/pugiconfig.hpp
+include/pugixml.hpp
+lib/cmake/
+lib/cmake/Savitar/
+lib/cmake/Savitar/Savitar-targets${MODCMAKE_BUILD_SUFFIX}
+lib/cmake/Savitar/Savitar-targets.cmake
+lib/cmake/Savitar/SavitarConfig.cmake
+lib/cmake/Savitar/SavitarConfigVersion.cmake
+lib/cmake/pugixml/
+lib/cmake/pugixml/pugixml-config${MODCMAKE_BUILD_SUFFIX}
+lib/cmake/pugixml/pugixml-config.cmake
+@so lib/libSavitar.so
+@static-lib lib/libpugixml.a
+@so lib/python${MODPY_VERSION}/site-packages/Savitar.so

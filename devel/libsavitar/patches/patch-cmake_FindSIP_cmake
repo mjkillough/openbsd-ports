@@ -1,0 +1,14 @@
+$OpenBSD$
+
+Index: cmake/FindSIP.cmake
+--- cmake/FindSIP.cmake.orig
++++ cmake/FindSIP.cmake
+@@ -68,7 +68,7 @@ endif()
+
+ get_filename_component(_python_binary_path ${Python3_EXECUTABLE} DIRECTORY)
+
+-find_program(SIP_EXECUTABLE sip
++find_program(SIP_EXECUTABLE sip-3
+     HINTS ${CMAKE_PREFIX_PATH}/bin ${CMAKE_INSTALL_PATH}/bin ${_python_binary_path} ${Python3_SITELIB}/PyQt5
+ )
+
